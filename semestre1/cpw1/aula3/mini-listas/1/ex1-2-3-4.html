@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex1-2-3-4</title>
+</head>
+<body>
+    <h1>Listazinha rapida</h1>
+    <h2>Exercicio 1: Qual a diferença entre um codec de vídeo e um contêiner de vídeo? Dê um
+        exemplo de cada.</h2>
+    <p>
+        O Codec (Codificador/Decodificador): É o algoritmo responsável por comprimir e
+        descomprimir os dados de áudio ou vídeo. A compressão é essencial para que os arquivos
+        sejam pequenos o suficiente para serem transmitidos pela internet. Exemplos de codecs
+        de videos são H.264 (amplamente suportado, mas patenteado) e VP9 (open-source, apoiado pelo Google).
+    </p>
+    <p>
+        Já o Contêiner (Container): É o "pacote" ou formato do arquivo que envolve os
+        dados de mídia já codificados. Ele define como os dados são organizados e
+        armazenados. Exemplos de contêineres de videos são tipicamente .mp4 (para H.264) e .webm (para VP9).
+    </p>
+    <h2>Exercicio 2 e 3</h2>
+    <video controls src="contents/hatsune-paranaue1.mp4" width="1280" height="720" poster="contents/foto.png">
+        <track kind="captions" src="contents/portugues.vtt" srclang="pt-BR" label="Português-Brasil" default>
+        <track kind="subtitles" src="contents/ingles.vtt" srclang="en" label="English">
+    </video>
+    <h2>Exercicio 4: Por que o atributo preload="none" em uma tag <audio> pode ser benéfico
+        em uma página com muitos arquivos de áudio?</h2>
+    <p>
+        Com none o navegador não pré-carrega o arquivo. Apenas inicia o download quando o usuário clica em "play". Ideal para economizar banda.
+    </p>
+</body>
+</html>

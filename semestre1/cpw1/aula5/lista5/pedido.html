@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Pedidos</title>
+</head>
+<body>
+    <form>
+        <fieldset action="/comprar" method="POST">
+            <label for='tamanhos'>Tamanho: </label>
+            <label for="pequena"><input type="radio" id="pequena" name="tamanhos" value="pequena" required>Pequena</label>
+            <label for="mmedia"><input type="radio" id="media" name="tamanhos" value="media">Média</label>
+            <label for="grande"><input type="radio" id="grande" name="tamanhos" value="grande">Grande</label>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <label for="ingredientes">Ingredientes: </label>
+            <label for="queijo_extra"><input type="checkbox" id="queijo_extra" name="ingredientes" value="queijo_extra" >Queijo Extra</label>
+            <label for="bacon"><input type="checkbox" id="bacon" name="ingredientes" value="bacon" >Bacon</label>
+            <label for="cebola"><input type="checkbox" id="cebola" name="ingredientes" value="Cebola" >Cebola</label>
+            <label for="azeitona"><input type="checkbox" id="azeitona" name="ingredientes" value="azeitona" >Azeitona</label>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <label for="bebidas">Bebida: </label>
+            <select id="bebidas" name="bebida_escolhida">
+                <option value="nenhuma">Nenhuma</option>
+                <option value="refrigerante">Refrigerante</option>
+                <option value="suco">Suco</option>
+                <option value="agua">Água</option>
+            </select>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <label for="quantidade">Quantidade: </label>
+            <input type="number" id="quantidade" name="quantidade_escolhida" min="1" max="5">
+        </fieldset>
+        
+        <br>
+
+        <fieldset>
+            <label for="horario">Horario de Entrega: </label>
+            <input type="time" id="horario" name="horario_escolhido">
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <label for="observacoes">Observacões: </label>
+            <textarea id="observacoes" name="observacoes_faladas" rows="5" cols="40" placeholder="Digite sua mensagem aqui" maxlength="50"></textarea>
+        </fieldset>
+        <br>
+        <button type="submit">Cliquei aqui para enviar</button>
+    </form>
+</body>
+</html>

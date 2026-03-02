@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista 2: Hector Portes da Silva de Oliveira</title>
+    <link rel="stylesheet" href="hector.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <h1>Cícero Lorem Ipsum</h1>
+        <h2>Desenvolvedor Front-End</h2>
+    </header>
+
+    <section id="sobre">
+        <h3>Sobre Mim</h3>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, facilis fugiat velit iure enim vitae obcaecati molestias ab consectetur et. Veritatis nihil voluptatem consequatur explicabo ipsam consectetur quam quod quaerat?
+        </p>
+        <figure>
+            <img src="contents/lorem.png" alt="Foto de Perfil">
+        </figure>
+    </section>
+
+    <section id="projetos">
+        <h3>Projetos</h3>
+        <nav>
+            <ul id="projetinhos">
+                <li><p>Lorem Simples</p></li>
+                <li>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat reiciendis eveniet aliquam fugit, ad ducimus molestiae nam eius tenetur atque maxime in consequatur et. Obcaecati perspiciatis enim error dolor fuga!
+                </li>
+                <li><a href="https://www.lipsum.com/" target="_blank">Link para o projeto</a></li>
+            </ul>
+            <ul id="projetinhos">
+                <li><p>Lorem Avançado</p></li>
+                <li>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat reiciendis eveniet aliquam fugit, ad ducimus molestiae nam eius tenetur atque maxime in consequatur et. Obcaecati perspiciatis enim error dolor fuga!
+                </li>
+                <li><a href="https://www.lipsum.com/" target="_blank">Link para o projeto</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <section id="contato">
+        <form action="enviar" method="post">
+            <fieldset>
+                <legend>Formulário de Contato</legend>
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required minlength="3" maxlength="50">
+                <br><br>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                <br><br>
+                <label for="area-interesse">Área de Interesse:</label>
+                <select name="area-interesse" id="area-interesse" required>
+                    <option value="" disabled selected>Selecione a área de interesse</option>
+                    <option value="simples">Lorem Simples</option>
+                    <option value="medio">Lorem Médio</option>
+                    <option value="avancado">Lorem Avançado</option>
+                </select>
+                <br><br>
+                <label for="disponibilidade">Disponibilidade para contato:</label>
+                <label><input type="radio" name="disponibilidade" value="manha" required>Manhã</label>
+                <label><input type="radio" name="disponibilidade" value="tarde">Tarde</label>
+                <label><input type="radio" name="disponibilidade" value="noite">Noite</label>
+                <br><br>
+                <label for="servicos">Serviços de Interesse:</label>
+                <label><input type="checkbox" name="servicos" value="cs">Criação de Site</label>
+                <label><input type="checkbox" name="servicos" value="da">Desenvolvimento de APP</label>
+                <label><input type="checkbox" name="servicos" value="c">Consultoria</label>
+                <br><br>
+                <label for="mensagem">Mensagem:</label>
+                <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                <br><br>
+                <button type="submit">Enviar</button>
+            </fieldset>
+        </form>
+    </section>
+
+    <section id="video">
+        <video width="100%" height="600" controls preload="metadata" poster="contents/lorem.png">
+            <source src="contents/lorem.mp4" type="video/mp4">
+    </section>
+</body>
+</html>

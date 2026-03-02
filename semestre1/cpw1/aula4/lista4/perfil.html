@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <fieldset>
+                <legend>Preferências Pessoais</legend>
+                <label for="ex">Nível de Experiência:</label>
+                <input type="range" id="ex" name="experiencia" min="1" max="10" step="1">
+                <br><br>
+                <label for="cor">Cor Favorita:</label>
+                <input type="color" id="cor" name="cor_favorita" value="#000000">
+                <br><br>
+                <label for="data">Data de Aniversário:</label>
+                <input type="date" id="data" name="aniversario">
+                <br><br>
+                <label for="hora">Horário Preferido (para notificações):</label>
+                <input type="time" id="hora" name="horario_pref">
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Preferências Técnicas</legend>
+                <label for="tec_in">Tecnologias de Interesse:</label>
+                <label><input type="checkbox" id="tec_in" name="html" value="sim">HTML</label>
+                <label><input type="checkbox" id="tec_in" name="css" value="sim">CSS</label>
+                <label><input type="checkbox" id="tec_in" name="js" value="sim">JavaScript</label>
+                <br><br>
+                <label for="sistema">Sistema Operacional:</label>
+                <select id="sistema" name="sistema_operacional">
+                    <option value="win">Windows</option>
+                    <option value="li">Linux</option>
+                    <option value="mac">MacOS</option>
+                </select>
+            </fieldset>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Gostos</legend>
+            <label for="pp">Preferências Pessoais:</label>
+            <label><input type="checkbox" id="pp" name="rpg">RPG</label>
+            <label><input type="checkbox" id="pp" name="fps">FPS</label>
+            <label><input type="checkbox" id="pp" name="2d">2D</label>
+            <label><input type="checkbox" id="pp" name="3d">3D</label>
+            <label><input type="checkbox" id="pp" name="mmo">MMO</label>
+            <br><br>
+            <label for="pt">Preferências Técnicas:</label>
+            <select id="pt" name="pref_tec">
+                <option value="" disabled selected>-- Escolha uma Plataforma --</option>
+                <option value="pc">PC</option>
+                <option value="ps">PS</option>
+                <option value="xbox">XBOX</option>
+            </select>
+        </fieldset>
+    </form>
+</body>
+</html>

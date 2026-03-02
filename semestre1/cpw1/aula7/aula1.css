@@ -1,0 +1,105 @@
+/* Coloque isso no topo do seu arquivo CSS */
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0%;
+}
+
+#intro {
+    color: green;
+}
+
+.texto {
+    color: blue;
+}
+
+.menu .item-menu {
+    color: blue;
+}
+
+div a {
+    color: purple;
+}
+
+.btn {
+    background-color: blue;
+}
+
+.btn {
+    background-color: green;
+}
+
+.caixa-exemplo {
+    width: 300px;
+    /* 1. Conteúdo */
+    height: 100px;
+    /* 1. Conteúdo */
+
+    /* 2. Padding (20px em todos os lados*/
+    padding: 20px;
+    /* 2. Padding (20px em todos os lados*/
+
+    /* 3. Borda (5px de espessura) */
+    border: 5px solid red;
+    /* 3. Borda (5px de espessura) */
+
+    /* 4. Margin (10px de espaço externo) */
+    margin: 10px;
+    /* 4. Margin (10px de espaço externo) */
+}
+
+.outra-caixa {
+    padding: 10px 20px 5px 20px;
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid black;
+}
+
+.container {
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+}
+
+.coluna {
+    width: 50%;
+    padding: 20px;
+    border: 5px solid black;
+}
+
+.card {
+    margin: 10px 0px;
+    position: relative;
+    border: 1px solid black;
+    width: 300px;
+    height: 200px;
+    display: flex;
+}
+
+.icone {
+    border: 1px solid black;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: fit-content;
+    height: fit-content;
+    background-color: blue;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+}
+
+.cima {
+    color: white;
+    padding: 0px 10px;
+}

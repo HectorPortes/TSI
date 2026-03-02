@@ -1,0 +1,9 @@
+body {
+    background-image: url(imagens/palmeirinha.png);
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    background-attachment: fixed;
+    text-align: left;
+    color: white;
+}

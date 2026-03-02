@@ -1,0 +1,71 @@
+h1 {
+    color: blue;
+}
+
+h2 {
+    background-color: f0f0f0;
+    color: black;
+}
+
+p {
+    font-family: Arial;
+    font-size: 32px;
+}
+
+a {
+    font-weight: bold;
+    color: purple;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+.teste {
+    color: red;
+    border: 1px solid red;
+    font-size: 24px;
+    font-family: 'Times New Roman';
+}
+
+.destaque {
+    background-color: white;
+}
+
+#teste2 {
+    color: red;
+    border: 1px solid black;
+    font-size: 12px;
+    font-family: 'Times New Roman';
+}
+
+#destaque2 {
+    background-color: white;
+    color: blue;
+    font-size: 21;
+    font-family: Arial;
+    border: 1px solid yellow;
+}
+
+/* Link não visitado */
+.pseudo:link {
+    color: blue;
+    text-decoration: underline;
+}
+
+/* Link já visitado */
+.pseudo:visited {
+    color: white;
+}
+
+/* Mouse por cima (feedback) */
+.pseudo:hover {
+    color: black;
+    text-decoration: none;
+    /* Remove sublinhado */
+}
+
+/* No momento do clique */
+.pseudo:active {
+    color: yellow;
+}

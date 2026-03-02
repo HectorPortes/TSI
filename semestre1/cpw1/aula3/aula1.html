@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Audios e Videos</title>
+</head>
+<body>
+    <h1>Audios e Videos</h1>
+    <h2>Audio com mais de um tipo para ter certeza da compatibilidade do navegador com o video.</h2>
+    <audio controls preload="metadata">
+        <source src="contents/patinho-feio-musica.mp3" type="audio/mpeg">
+        <source src="contents/patinho-feio-musica2.ogg" type="audio/ogg; codecs=opus">
+    </audio>
+    <h2>Audio de fundo automatico. O controls ta ali pra conseguir parar e desmutar o som.</h2>
+    <audio src="contents/patinho-feio-musica.mp3" controls autoplay loop muted></audio>
+    <h2>Video com garantia de compatibilidade com o navegador.</h2>
+    <video controls width="1280" height="720" poster="contents/foto.png" preload="metadata">
+        <source src="contents/hatsune-paranaue1.mp4" type="video/mp4">
+        <source src="contents/hatsune-paranaue2.webm" type="video/webm">
+    </video>
+    <h2>Iframe</h2>
+    <iframe src="contents/hatsune-paranaue1.mp4"
+    width="560" height="315"
+    title="Player de vídeo do YouTube"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+    gyroscope; picture-in-picture;"
+    allowfullscreen
+    loading="lazy">
+    </iframe>
+    <h2>Iframe que contem outra pagina</h2>
+    <iframe sandbox src="mini-listas/1/ex1-2-3-4.html"></iframe>
+    
+</body>
+</html>

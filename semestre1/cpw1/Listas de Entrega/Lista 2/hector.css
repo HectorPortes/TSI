@@ -1,0 +1,150 @@
+body {
+    background-color: rgb(218, 250, 235);
+}
+
+.menu {
+    list-style: none;         
+    display: flex;            
+    justify-content: center;  
+    background-color: black;
+    padding: 15px 0;          
+    margin: 0;                
+  }
+  
+  .menu li {
+    margin: 0 15px;
+  }
+  
+  .menu li a {
+    color: white;             
+    text-decoration: none;   
+    font-weight: bold;        
+  }
+  
+  .menu li a:hover {
+    text-decoration: underline;
+  }
+
+h1 {
+    color: black;          
+    font-size: 32px;          
+    text-align: center;       
+    margin-top: 20px;         
+}
+
+h2 {
+    color: black;         
+    font-size: 28px;         
+    margin-top: 15px; 
+    text-align: center;       
+}
+
+#sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+#sobre h3 {
+    text-align: center;
+    color: black;         
+    font-size: 24px;
+    margin-bottom: 0;         
+}
+
+#sobre p {
+    text-align: left;
+    width: 600px;
+    font-size: 16px;                 
+    color: black;          
+}
+
+#sobre img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;               
+    height: auto;              
+    border: 1px solid black;     
+    border-radius: 10px;
+}
+
+#projetos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#projetos h3 {
+    text-align: center;
+    color: black;         
+    font-size: 24px;         
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+#projetinhos {
+    text-align: left;
+    list-style: none;         
+    padding: 0px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 5px;
+    width: 600px;
+}
+
+#projetinhos p{
+    margin: 5px 0;
+    font-weight: bold;
+    font-size: 18px;          
+}
+
+#projetinhos li {
+    margin: 5px;
+    font-size: 16px;           
+}
+
+#projetinhos a {
+    color: blue;             
+    text-decoration: none;
+    margin: 0px;   
+}
+
+
+#contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+#contato fieldset {
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+#contato legend {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#contato button {
+    border-bottom: 1px solid black;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+#contato button:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+#video {
+    margin-top: 40px;
+    border: 2px solid black;
+    border-radius: 10px;
+}

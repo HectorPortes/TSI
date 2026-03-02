@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo com Link, Botão e Título</title>
+  <style>
+    /* Estilo para o título h2 */
+    h2 {
+      text-transform: uppercase;     /* transforma o texto em maiúsculas */
+      letter-spacing: 2px;           /* espaçamento entre letras */
+      color: #333;
+    }
+
+    /* Estilo para o link quando o mouse passa por cima */
+    a:hover {
+      color: red;                    /* muda a cor do link ao passar o mouse */
+    }
+
+    /* Estilo da div com fundo preto e 50% de transparência */
+    .caixa {
+  width: 50%; /* Define a largura da caixa como 50% */
+  height: 50%; /* * Define a largura da caixa como 50% */
+  max-width: 100%; /* Garante que a largura não ultrapasse 100% do elemento pai */
+  max-height: 100%; /* Garante que a altura não ultrapasse 100% do elemento pai */
+  padding: 1.25rem; /* Espaçamento interno de 1.25 rem em todos os lados */
+  margin: 1.25rem; /* Espaçamento externo de 1.25 rem em todos os lados */
+  color: white; /* Define a cor do texto como branca */
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo preto com 50% de opacidade (semi-transparente) */
+  border-radius: 8px; /* Arredonda os cantos da caixa com raio de 8px */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra suave para dar profundidade */
+  box-sizing: border-box; /* Inclui padding e borda no cálculo total da largura e altura */
+  overflow: auto; /* Adiciona barra de rolagem se o conteúdo ultrapassar os limites da caixa */
+}
+
+    /* Estilo básico para o botão */
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Seja bem-vindo</h2>
+
+  <a href="#">Clique aqui para saber mais</a>
+
+  <br><br>
+
+  <button>Enviar</button>
+
+  <div class="caixa">
+    <p>Esta é uma caixa com fundo preto e transparência.</p>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Botões</title>
+</head>
+<body>
+    <form>
+        <input type="text" name="dado" value="Valor Inicial">
+
+        <input type="reset" value="Limpar">
+
+        <button type="button">Verificar (JS)</button>
+    </form>
+    <br>
+    <form action="/comprar" method="POST">
+        <input type="hidden" name="id_produto" value="12345">
+       
+        <label>Quantidade:</label>
+        <input type="number" name="qtde" min="1" value="1">
+       
+        <button type="submit">Comprar</button>
+       </form>
+       <br>
+       <form>
+        <label for="nome_req">Nome (Obrigatório):</label>
+        <input type="text" id="nome_req" name="nome" required>
+       
+        <button type="submit">Enviar</button>
+       </form>
+       <br>
+       <form>
+        <label for="senha_len">Senha (mín. 8, máx. 16 caracteres):</label>
+        <input type="password" id="senha_len" name="senha"
+        minlength="8" maxlength="16" required>
+       
+        <button type="submit">Enviar</button>
+       </form>
+       <br>
+       <form>
+        <label for="idade_minmax">Idade (Permitido: 18 a 99):</label>
+        <input type="number" id="idade_minmax" name="idade"
+        min="18" max="99" required>
+       
+        <button type="submit">Enviar</button>
+       </form>
+       <br>
+       <form>
+        <label for="nota_step">Nota (incrementos de 0.5):</label>
+        <input type="number" id="nota_step" name="nota"
+        min="0" max="10" step="0.5">
+       
+        <button type="submit">Enviar</button>
+       </form>
+              
+</body>
+</html>

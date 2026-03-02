@@ -1,0 +1,3 @@
+# Primeiramente abra o terminal (atalho: ctrl + ") e confira se o caminho da pasta é o mesmo do que está seus arquivos. Por exemplo seus arquivos estão na pasta -> C:\Users\nome\Downloads\algoritmos\algo mas quando você abre seu terminal e aparace apenas C:\Users\nome\Downloads\algoritmos - faça o seguinte, digite: cd (de um espaço e precione tab até aparecer o nome da sua pasta), vai ficar assim -> .\algo\ e da enter
+## No terminal com o caminho correto, como ta escrito em cima, digite: npm install prompt-sync
+## Em seguida no seu código faça: let prompt = require('prompt-sync')() para poder usar o prompt

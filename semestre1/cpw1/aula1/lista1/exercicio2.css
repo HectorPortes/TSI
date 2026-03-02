@@ -1,0 +1,9 @@
+
+body {
+    background-image: url('imagens/studio-ghibli-logo.png');
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    background-attachment: fixed;
+    text-align: left;
+}

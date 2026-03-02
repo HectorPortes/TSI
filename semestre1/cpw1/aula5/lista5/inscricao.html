@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscrição</title>
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data" action="/comprar">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <label for="nome">Nome: </label>
+            <input type="text" id="nome" name="nome_usuario" required>
+            <br><br>
+            <label for="cpf">CPF: </label>
+            <input type="text" id="cpf" name="cpf_usuario" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Formato: XXX.XXX.XXX-XX">
+            <br><br>
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email_usuario" required>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Tipo de Ingresso</legend>
+            <label for="ingresso">Ingresso:</label>
+            <label for="estudante"><input type="radio" id="estudante" name="ingresso" value="EST" required>Estudante (R$50)</label>
+            <label for="profissional"><input type="radio" id="profissional" name="ingresso" value="PRO">Profissional (R$150)</label>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Workshops</legend>
+            <label for="workshops">Workshops: </label>
+            <label for="front"><input type="checkbox" id="front" name="workshops" value="tri_front">Trilha Front-End</label>
+            <label for="back"><input type="checkbox" id="back" name="workshops" value="tri_back">Trilha Back-End</label>
+            <label for="devops"><input type="checkbox" id="devops" name="workshops" value="tri_devops">Trilha DevOps</label>
+        </fieldset>
+        <br>
+        <fieldset>
+            <label for="comprovante">Upload Comprovante (Estudante):</label>
+            <input type="file" id="comprovante" name="comprovante_usuario" accept="image/*">
+        </fieldset>
+        <br>
+        <fieldset>
+            <label for="nome_cartao">Nome do Cartão:</label>
+            <input type="text" id="nome_cartao" name="nome_cartao_usuario" required>
+            <br><br>
+            <label for="num_cartao">Número do Cartão:</label>
+            <input type="text" id="num_cartao" name="num_cartao_usuario" required pattern="[0-9]{16}" maxlength="16">
+        </fieldset>
+        <br>
+        <button type="submit">Cliquei aqui para enviar</button>
+    </form>
+</body>
+</html>
