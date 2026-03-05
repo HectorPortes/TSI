@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ex9</title>
+</head>
+<body>
+  <p id="paragrafo">Pai médio brasileiro</p>
+  <button onclick="desaparecer()">Desaparecer</button>
+  <button onclick="aparecer()">Aparecer</button>
+  <script>
+    desaparecer = () => {
+      document.getElementById("paragrafo").style.display="none"
+    }
+    aparecer = () => {
+      document.getElementById("paragrafo").style.display="block"
+    }
+  </script>
+</body>
+</html>

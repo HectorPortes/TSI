@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex6</title>
+</head>
+<body>
+    <p id="css">Tamanho!</p>
+    <button onclick="aumentar()">Aumentar</button>
+    <button onclick="diminuir()">Diminuir</button>
+    <script>
+        let tamanho = document.getElementById("css")
+        aumentar = () => {
+            tamanho.style.fontSize="55px"            
+        }
+        diminuir = () => {
+            tamanho.style.fontSize="24px"
+        }
+    </script>
+</body>
+</html>

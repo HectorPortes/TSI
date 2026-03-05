@@ -1,0 +1,1 @@
+4) Utilize um arquivo JavaScript externo. Crie um script que altere o texto de um parágrafo HTML com id="teste" para "Texto alterado pelo JavaScript externo!" quando a página for carregada.

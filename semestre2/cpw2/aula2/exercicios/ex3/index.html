@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex3</title>
+</head>
+<body>
+    <form id="meuFormulario">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required>
+        <br><br>
+        <label for="sobrenome">Sobrenome:</label>
+        <input type="text" id="sobrenome" required>
+        <br><br>
+        <label for="turma">Turma:</label>
+        <input type="text" id="turma" required>
+        <br><br>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        document.getElementById("meuFormulario").addEventListener("submit", function(event) {
+            event.preventDefault()
+            let nome = document.getElementById("nome").value
+            let sobrenome = document.getElementById("sobrenome").value
+            let turma = document.getElementById("turma").value
+            alert(`Bem vindo ${nome} ${sobrenome} da turma ${turma} ano.`)
+        })
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,1 @@
+5) Adicione um botão que, ao ser clicado, altere uma imagem, usando JavaScript.

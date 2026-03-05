@@ -1,0 +1,1 @@
+7) Crie um formulário HTML com diferentes tipos de campos de entrada (<input>), incluindo texto, email, senha e número. Adicione um botão que exiba uma mensagem de alerta com todos os valores inseridos quando clicado.

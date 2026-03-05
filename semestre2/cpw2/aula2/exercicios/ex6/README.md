@@ -1,0 +1,1 @@
+6) Crie uma página HTML com um parágrafo que tenha id="css". Adicione um botão que, ao ser clicado, altere o estilo do parágrafo para uma fonte de 55px.

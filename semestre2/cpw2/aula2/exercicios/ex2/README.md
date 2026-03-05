@@ -1,0 +1,1 @@
+2) Adicione um script JavaScript ao final do corpo (<body>) de uma página HTML, que mostre um alerta dizendo "Conteúdo carregado" quando a página for carregada.

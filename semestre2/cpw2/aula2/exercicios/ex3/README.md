@@ -1,0 +1,1 @@
+3) Crie um formulário HTML com os campos "Nome", "Sobrenome" e "Turma". Adicione um botão de envio que, ao ser clicado, mostre uma mensagem de alerta com os valores inseridos nos campos.

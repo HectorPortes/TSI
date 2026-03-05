@@ -8,11 +8,9 @@ R: JavaScript   Typescript   VBscript
 
 3. Qual das opções a seguir NÃO é uma característica do JavaScript?
     a. Pode ser usado no lado do cliente e do servidor
-    b. Possui tipagem estática por padrão. X
+    Xb. Possui tipagem estática por padrão.
     c. É a linguagem de script de página mais popular.
     d. Pode manipular o Document Object Model (DOM)
 
 4. Resuma a evolução do JavaScropt desde sua criação até os dias atuais.
 R:
-
-5.

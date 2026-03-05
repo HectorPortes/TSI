@@ -1,0 +1,1 @@
+8) Faça um script JavaScript que utilize o método document.write() para exibir "Bem-vindo ao curso de JavaScript!" na página HTML.

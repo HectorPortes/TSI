@@ -1,0 +1,1 @@
+1) Crie uma página HTML que exiba "Bem vindo a nossa aula!" usando um script JavaScript interno dentro da tag <head>.
