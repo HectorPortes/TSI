@@ -1,0 +1,1 @@
+3. Crie um objeto Date representando o dia atual.

@@ -1,0 +1,1 @@
+2) Por que você deve usar let ao invés de var em projetos modernos?

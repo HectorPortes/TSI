@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ex5</title>
+</head>
+<body>
+  <img id="imagem" src="./images/pic_bulboff.gif" style="width:666">
+  
+  <br>
+
+  <button type="button" onclick="ligDes()">Ligar/Desligar</button>
+  
+  <script>
+    const ligDes = () => {
+      let imagem = document.getElementById("imagem")
+      if(imagem.getAttribute("src") === "./images/pic_bulboff.gif") {
+        imagem.src = "./images/pic_bulbon.gif"
+      } else {
+        imagem.src = "./images/pic_bulboff.gif"
+      }
+    }
+  </script>
+</body>
+</html>

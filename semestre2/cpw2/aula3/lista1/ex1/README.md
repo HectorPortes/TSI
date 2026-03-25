@@ -1,0 +1,1 @@
+1) Crie uma variável utilizando const e atribua a ela o valor "Programação".

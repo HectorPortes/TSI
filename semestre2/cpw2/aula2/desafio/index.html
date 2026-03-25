@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio</title>
+</head>
+<body>
+  <p id="paragrafo">Vou mudar por inteira!</p>
+  <form onsubmit="event.defaultPrevented()", onsubmit="mudar()">
+    <label for="tamanho">Tamanho:</label>
+    <input type="range" id="tamanho" min="12" max="100" value="24" oninput="mudar()">
+
+    <br><br>
+
+    <label for="cor">Cor:</label>
+    <input type="color" id="cor" required>
+
+    <br><br>
+
+    <label for="fonte">Fonte:</label>
+    <input type="radio" id="fonte" required>
+
+    <br><br>
+
+    <button type="submit">Mudar</button>
+  </form>
+
+  <script>
+    document.getElementById("meuFormulario").addEventListener("submit", function(event) {
+
+    })
+    
+    mudar = () => {
+
+    }
+  </script>
+</body>
+</html>

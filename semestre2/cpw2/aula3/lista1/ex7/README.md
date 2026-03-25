@@ -1,0 +1,1 @@
+7) Declare um objeto chamado carro com as propriedades: marca, modelo e ano.

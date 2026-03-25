@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form id="meuFormulario" onsubmit="event.defaultPrevented()">
+    <label for="nome">Nome</label>
+    <input type="text" id="nome" required>
+
+    <br><br>
+
+    <label for="sobrenome">Sobrenome</label>
+    <input type="text" id="sobrenome" required>
+
+    <br><br>
+
+    <label for="nascimento">Data de Nascimento</label>
+    <input type="text" id="nascimento" required>
+
+    <br><br>
+    <button type="button" onmouseover="mostrar()">Verficar</button>
+    <button type="submit" onsubmit="validar()">Enviar</button>
+  </form>
+
+  <script>
+    const validar = () => {
+      const nome = document.getElementById("nome").value.trim().toUpperCase();
+      const sobrenome = document.getElementById("sobrenome").value.trim().toUpperCase();
+      const nascimento = document.getElementById("nascimento").value.trim();
+  
+      if(nascimento.length < 10) {
+        alert("A data de nascimento deve conter no mínimo 10 caracteres (formato DD/MM/AAAA).")
+      }
+    }
+
+    mostrar = () => {
+      const dados = validar();
+      if(dados) {
+        const { nome, sobrenome, nascimento } = dados;
+        const mensagem = `Nome: ${nome}, Sobrnome: ${sobrenome}, Data de Nascimento: ${nascimento}`c
+      }
+    }
+
+    return { nome, sobrenome, nascimento }
+  </script>
+</body>
+</html>

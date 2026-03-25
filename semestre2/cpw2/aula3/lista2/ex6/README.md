@@ -1,0 +1,1 @@
+6. Concatene as strings "Hello" e "World" com um espaço entre elas.

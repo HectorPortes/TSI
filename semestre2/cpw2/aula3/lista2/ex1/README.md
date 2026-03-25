@@ -1,0 +1,1 @@
+1. Use o método toUpperCase() para converter "javascript" em letras maiúsculas.

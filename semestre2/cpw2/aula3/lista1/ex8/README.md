@@ -1,0 +1,1 @@
+8) Explique o que o operador this faz em métodos de objetos.

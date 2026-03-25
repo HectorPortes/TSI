@@ -1,0 +1,1 @@
+3) Declare uma variável number com valor 42. Qual é o resultado de typeof?

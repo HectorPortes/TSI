@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ex5</title>
+</head>
+<body>
+  <label for="valor1">Valor:</label>
+  <p id="randomico"></p>
+  <p></p>
+  <button type="button" onclick="randomizar()">Randomizar</button>
+
+  <script>
+    const randomizar = () => {
+      let numero = Math.floor(Math.random() * 11)
+      let randomico = document.getElementById("randomico").innerText=`Valor: ${numero}`
+      
+    }
+  </script>
+</body>
+</html>

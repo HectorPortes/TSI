@@ -1,8 +1,8 @@
-soma = (a, b) => {
+const soma = (a, b) => {
   return a + b;
 }
 
-multiplicacao = (a, b) => {
+const multiplicacao = (a, b) => {
   return a * b;
 }
 
