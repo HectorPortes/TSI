@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ex5</title>
+</head>
+<body>
+  <form>
+    <label for="valor1">Valor:</label>
+    <input type="number" id="valor1" required>
+
+    <br><br>
+
+    <label for="randomico">Valor:</label>
+    <input type="number" id="randomico" disabled>
+    
+    <br><br>
+
+    <button type="button" onclick="randomizar()">Randomizar</button>
+    <button type="button" onclick="verificar()">Verificar</button>
+  </form>
+
+  <script>
+    const randomizar = () => {
+      let numero = Math.floor(Math.random() * 11)
+      let randomico = document.getElementById("randomico").value=numero
+    }
+
+    const verificar = () => {
+      let valor1 = document.getElementById("valor1").value
+      let valor2 = document.getElementById("randomico").value
+      if (valor2 === valor1){
+        return alert(`${valor2} e ${valor1} são iguais`)
+      } else {
+        return alert(`${valor2} e ${valor1} são diferentes`)
+      }
+    }
+  </script>
+</body>
+</html>

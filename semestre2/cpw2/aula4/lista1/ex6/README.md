@@ -1,0 +1,1 @@
+6. Crie um formulário onde o usuário insere duas idades. Utilize os operadores ===, &&, || e crie botões que façam as comparações. Se forem maiores que 18, exiba quais são adultos.
