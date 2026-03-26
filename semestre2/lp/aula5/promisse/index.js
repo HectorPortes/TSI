@@ -1,16 +1,14 @@
-import * as fs from 'node:fs/promises';
-const dados = 'Texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto';
+import { ehPar } from "./matematica.js";
+import { ehParV2 } from "./matematica.js";
 
-// fs.writeFile('./arquivo1.txt', dados).then().catch()
-fs.writeFile('./arquivo1.txt', dados)
-.then(() => {
-  console.log('Arquivo 1 gerado com sucesso!');
-  return fs.writeFile('./arquivo2.txt', dados);
+// V1 do ehPar
+console.log(ehPar(3));
+
+// V2 do ehPar (Promise)
+ehParV2(15)
+.then((resultado) => { // será acionado caso a Promessa seja "resolved"
+  console.log("Promessa resolvida: ", resultado);
 })
-.then(() => {
-  console.log('Arquivo 2 gravado com sucesso!');
+.catch((erro) => { // será acionado caso a Promessa seja "rejected"
+  console.log("Promessa rejeitada: ", erro);
 })
-.catch((erro) => {
-  console.log('Erro ao gravar arquivo!');
-  console.log(erro);
-}); // só é um catch para os dois 
