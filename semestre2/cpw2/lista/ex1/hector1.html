@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ex1</title>
+</head>
+<body>
+  <div>
+    <form>
+      <label for="data">Data de Nascimento:</label>
+      <input type="date" id="data">
+      
+      <br><br>
+      
+      <button type="button" onclick="coletar()">Enviar</button>
+    </form>
+  </div>
+
+  <div>
+    <p id="dia_nasceu"></p>
+    <p id="dia_cair"></p>
+  </div>
+
+  <script>
+    const coletar = () => {
+      let data = document.getElementById("data").value;
+      let nasc = new Date(data);
+      let atual = new Date();
+      const diasSemana = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sabado"];
+      document.getElementById("dia_nasceu").innerText=`O usuario nasceu em uma/um ${diasSemana[d.getDay()]}`;
+      let proxAni = new Date(atual.getFullYear(), nasc.getMonth(), nasc.getDate());
+      if(proxAni < atual) {
+        proxAni.setFullYear(atual.getFullYear() + 1);
+      }
+      document.getElementById("dia_cair").innerText=`O proximo dia da semana que ira cair o aniversario do usuario é em um/uma ${diasSemana[proxAni.getDay()]}`;
+    }
+  </script>
+</body>
+</html>

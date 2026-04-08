@@ -1,0 +1,16 @@
+{
+  "name": "at1",
+  "version": "1.0.0",
+  "description": "Utilizando o serviço Brasil API (https://brasilapi.com.br/) Escolha uma API e faça uma consulta (GET), similar ao que fizemos em sala com a API de Bitcoin.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "node-cron": "^4.2.1"
+  }
+}

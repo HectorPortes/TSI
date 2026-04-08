@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ex2</title>
+</head>
+<body>
+  <label for="aposta">Aposta:</label>
+  <input type="number" id="aposta" required>
+  
+  <br><br>
+
+  <button type="button" onclick="sortear()">Sortear Números</button>
+
+  <p id="numeros"></p>
+
+  <h1 id="resultado"></h1>
+
+  <script>
+    const sortear = () => {
+      let nums = [];
+      let cont = 0;
+      
+      for(let i = 0; i > -1; i++){
+        let numero = Math.floor(Math.random() * (61 - 1)) + 1;
+        let verificador = false;
+        
+        for(let y = 0; y < nums.length; y++){
+          if(nums[y] === numero){
+            verificador = true;
+            break;
+          }
+        }
+          
+        if(verificador != true) {
+          nums[cont] = numero;
+          cont++;
+        }
+          
+        if(cont === 6){
+          break;
+        }
+      }
+        
+      let texto = document.getElementById("numeros");
+      let resultado = document.getElementById("resultado");
+      texto.innerText=`${nums[0]} ${nums[1]} ${nums[2]} ${nums[3]} ${nums[4]} ${nums[5]}`;
+
+      let aposta = document.getElementById("aposta").value;
+      let mensagem = "Desculpe não foi dessa vez."
+      for(let i = 0; i < nums.length; i++){
+        if(nums[i] === Number(aposta)){
+          mensagem = "Parabéns você ganhou a aposta!";
+          break;
+        }
+      }
+
+      if(aposta === ""){
+        return texto.innerText="Precisa fazer uma aposta.", resultado.innerText=""
+      } else {
+        return resultado.innerText=mensagem
+      }
+    }
+  </script>
+</body>
+</html>

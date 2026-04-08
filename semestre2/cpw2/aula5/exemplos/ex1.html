@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo 1 do slide</title>
+</head>
+<body>
+  <h2>Perfil do Usuario</h2>
+
+  <p id="resultado"></p>
+
+  <script>
+    // 2. O objeto (muito parecido com o do seu slide)
+    const pessoa = { nome: "Maria", sobrenome: "Souza", idade: 30 };
+
+    // 3. A variavel de texto começando vazia
+    let textoFinal = "";
+
+    // 4. O loop Fon ... In
+    for (let proriedade in pessoa){
+      // Pegamos o valor e adicionamos um espaço em branco no final
+      textoFinal += pessoa[proriedade] + " ";
+    }
+
+    // 5. O comando web: pegue o paragrafo "resultado" e coloque o textoFinal dentro dele
+    document.getElementById("resultado").innerHTML = textoFinal;
+  </script>
+</body>
+</html>

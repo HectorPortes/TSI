@@ -1,0 +1,1 @@
+7) Crie um programa que solicite ao usuário uma frase e uma palavra para buscar. Utilize o método search para encontrar a posição da palavra na frase e exiba o resultado.
