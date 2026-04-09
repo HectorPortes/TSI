@@ -8,4 +8,9 @@ const pegar = (valor, indice) => {
 
 carros.forEach(pegar)
 
+// usando arrow function
+// carros.forEach((valor, indice) => {
+//   texto += `${indice}: ${valor}\n`
+// })
+
 console.log(texto);

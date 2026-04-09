@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo 2</title>
+  <style>
+    /* Texto menor para celulares */
+    p {
+      font-size: 14px;
+    }
+
+    /* Texto médio para tablets */
+    @media only screen and (min-width: 768px) {
+      p {
+        font-size: 18px;
+      }
+    }
+
+    /* Texto maior para monitores grandes */
+    @media only screen and (min-width: 1200px) {
+      p {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Exemplo de Texto Reponsivo</h1>
+  <p>Este é um paragrafo que se adapta ao tamnho da tela. Em celulares, o texto terá 14px. Em</p>
+  <p>Redimensione a janela do navegador para ver as mudanças de tamanho do texto.</p>
+</body>
+</html>

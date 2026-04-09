@@ -11,8 +11,11 @@ const porta = 3000;
 // Update - atualizar dados de uma pessoa (PUT/PATCH)
 // Delete - remover uma pessoa (DELETE)
 
+// executar com nomedon - npx nodemon (nome-arquivo)
+
+//                  req       , res
 api.get('/status', (requisicao, resposta) => {
-  resposta.send('API Online');
+  resposta.send('API Online!');
 });
 
 // inicializador da api

@@ -7,4 +7,10 @@ const soma = (valor) => {
 }
 
 numeros.forEach(soma);
+
+// usando arrow function
+// numeros.forEach((numeros) => {
+//   total += numeros
+// })
+
 console.log(total);

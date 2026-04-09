@@ -1,0 +1,1 @@
+Curso escolhido: Curso em Vídeo - por Gustavo Guanabara: Algoritmos
