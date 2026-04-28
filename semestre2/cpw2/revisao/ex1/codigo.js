@@ -22,12 +22,17 @@ const validar = () => {
     // validações de email
     email = email.trim() // tirando os espaços do inicio e fim
     let arroEmail = email.search("@") // verificando se existe arroba
+    let ponEmail = email.search(".com")
     if(arroEmail === -1){ // se não existir arroba
-      return alert("Email não contem @.") // fala que não existe
+      return alert("Email não contem @") // fala que não existe
     } else if(arroEmail === 0){ // verificando se o @ é o primeiro caracter
-      return alert("O email deve conter no minimo 1 caracter antes do @.") // da o aviso
+      return alert("O email deve conter no minimo 1 caracter antes do @") // da o aviso
     } else if(email.length - 1 === arroEmail){ // verifica se depois do arroba existe algo
       return alert("Não existe texto depois do @.") // fala que não existe
+    } else if(ponEmail === -1){
+      return alert("Email invalido, não existe .com")
+    } else if(ponEmail <= (arroEmail + 3)){
+      return alert("Email invalido, deve haver um email antes do .com")
     }
     // validações de email
 
@@ -39,6 +44,20 @@ const validar = () => {
     let f1 = nascimento.slice(0,2) // variavel que pega os primeiros 2 numeros de data. ex: 00112222 -> 00
     let f2 = nascimento.slice(2,4) // variavel que pega os numeros apartir do 3º até o 4º de data. ex: 00112222 -> 11
     let f3 = nascimento.slice(4) // variavel que pega os todos os numeros depois do 4º de data. ex: 00112222 -> 2222
+    let dataAtual = new Date()
+    let dia = Number(f1)
+    let mes = Number(f2)
+    if(f3 > dataAtual.getFullYear()){
+      return alert("Ano invalido, não pode ser futuro.")
+    } else if(mes < 1 || mes > 12) {
+      return alert("Mes invalido")
+    } else if(dia < 1 || dia > 31 && mes != 2){
+      return alert("Dia invalido, não pode ser menor que 1 e nem maior que 31")
+    } else if(mes === 2) {
+      if(dia > 28) {
+        return alert("Dia invalido, no mes de fevereiro só vai até 28")
+      }
+    }
     nascimento = `${f1}/${f2}/${f3}` // substitui a data antiga pela formatada, onde junta as variaveis com barras
     // validações de data
 

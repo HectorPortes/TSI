@@ -1,57 +1,281 @@
-body {
-  background-color: #e0f6fd;
+@media only screen and (min-width: 600px) {
+  body {
+    background-color: #e0f6fd;
+    margin: 0%;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+    
+    background-color: rgb(31, 155, 249);
+    font-size: 18px;
+    font-weight: bold;
+
+    padding-top: 1cap;
+    padding-bottom: 1cap;
+    margin-bottom: 1cap;
+  }
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    margin: 0%;
+  }
+
+  .formulario {
+    /* centralizando */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* criando borda e espaçando */
+    border: 1px solid black;
+    border-radius: 2cap;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px 90px 20px 90px;
+    gap: 15px;
+
+    /* deixando o tamanho da letra igual para todos os labels */
+    font-size: 21px;
+
+    /* outras coisas */
+    background-color: #ffffff;
+  }
+
+  .nome {
+    /* deixando o label e input um embaixo do outro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .email {
+    /* deixando o label e input um embaixo do outro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .nascimento {
+    /* deixando o label e input um embaixo do outro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+  }
+
+  #nome {
+    font-size: 16px;
+  }
+
+  #email {
+    font-size: 16px;
+  }
+
+  #nascimento {
+    font-size: 16px;
+  }
+
+  #botao {
+    font-size: 16px;
+  }
 }
 
-h1 {
-  display: flex;
-  justify-content: center;
-  margin: 0%;
+@media only screen and (max-width: 1980px){
+  body {
+    background-color: #e0f6fd;
+    margin: 0%;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+    
+    background-color: rgb(31, 155, 249);
+    font-size: 18px;
+    font-weight: bold;
+
+    padding-top: 1cap;
+    padding-bottom: 1cap;
+    margin-bottom: 1cap;
+  }
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    margin: 0%;
+  }
+
+  .formulario {
+    /* centralizando */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* criando borda e espaçando */
+    border: 1px solid black;
+    border-radius: 2cap;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px 90px 20px 90px;
+    gap: 15px;
+
+    /* deixando o tamanho da letra igual para todos os labels */
+    font-size: 21px;
+
+    /* outras coisas */
+    background-color: #ffffff;
+  }
+
+  .nome {
+    /* deixando o label e input um embaixo do outro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .email {
+    /* deixando o label e input um embaixo do outro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .nascimento {
+    /* deixando o label e input um embaixo do outro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+  }
+
+  #nome {
+    font-size: 16px;
+  }
+
+  #email {
+    font-size: 16px;
+  }
+
+  #nascimento {
+    font-size: 16px;
+  }
+
+  #botao {
+    font-size: 16px;
+  }
 }
 
-.formulario {
-  /* centralizando */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
+@media only screen and (orientation: landscape){ /* ou portrait, para quando estiver de pé */
+  body {
+    background-color: yellow;
+    margin: 0%;
+  }
 
-  /* criando borda e espaçando */
-  border: 1px solid black;
-  border-radius: 2cap;
-  width: fit-content;
-  height: fit-content;
-  padding: 20px 90px 20px 90px;
-  gap: 15px;
+  nav {
+    display: flex;
+    justify-content: space-around;
+    
+    background-color: rgb(31, 155, 249);
+    font-size: 18px;
+    font-weight: bold;
 
-  /* deixando o tamanho da letra igual para todos os labels */
-  font-size: 21px;
+    padding-top: 1cap;
+    padding-bottom: 1cap;
+    margin-bottom: 1cap;
+  }
+  a {
+    color: black;
+    text-decoration: none;
+  }
 
-  /* outras coisas */
-  background-color: #ffffff;
-}
+  h1 {
+    display: flex;
+    justify-content: center;
+    margin: 0%;
+  }
 
-.nome {
-  /* deixando o label e input um embaixo do outro */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3px;
-}
+  .formulario {
+    /* centralizando */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
 
-.email {
-  /* deixando o label e input um embaixo do outro */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3px;
-}
+    /* criando borda e espaçando */
+    border: 1px solid black;
+    border-radius: 2cap;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px 90px 20px 90px;
+    gap: 15px;
 
-.nascimento {
-  /* deixando o label e input um embaixo do outro */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3px;
+    /* deixando o tamanho da letra igual para todos os labels */
+    font-size: 21px;
+
+    /* outras coisas */
+    background-color: #ffffff;
+  }
+
+  .nome {
+    /* deixando o label e input um embaixo do outro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .email {
+    /* deixando o label e input um embaixo do outro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .nascimento {
+    /* deixando o label e input um embaixo do outro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+  }
+
+  #nome {
+    font-size: 16px;
+  }
+
+  #email {
+    font-size: 16px;
+  }
+
+  #nascimento {
+    font-size: 16px;
+  }
+
+  #botao {
+    font-size: 16px;
+  }
 }
