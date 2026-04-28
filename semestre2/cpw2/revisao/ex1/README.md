@@ -1,0 +1,1 @@
+1) Crie uma página HTML, com os campos, nome, e-mail e data de nascimento e um botão para exibir, faça as validações para cada campo e exiba os dados, quando o botão for clicado

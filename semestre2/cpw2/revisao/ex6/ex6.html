@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 6</title>
+</head>
+<body>
+  <label for="frase">Digite uma frase:</label>
+  <input type="text" id="frase" required>
+  <br><br>
+  <label for="palavra">Digite a palavra que deseja buscar:</label>
+  <input type="text" id="palavra" required>
+  <br><br>
+  <button type="button" onclick="procurar()">Procurar</button>
+  <p id="ver"></p>
+  <p id="res"></p>
+
+  <script>
+    function procurar() {
+      let frase = document.getElementById("frase").value
+      let palavra = document.getElementById("palavra").value
+      frase = frase.trim()
+      palavra = palavra.trim()
+      let posicao = frase.search(palavra)
+      document.getElementById("ver").innerHTML=frase
+      if(posicao === -1){
+        return document.getElementById("res").innerHTML=`A palavra ${palavra} não existe na frase.`
+      } else {
+        let posI = posicao
+        let posF =  posicao + (palavra.length)
+        return document.getElementById("res").innerHTML=`A palavra ${frase.slice(posI, posF)} se encontra na posição ${posI + 1} a ${posF}, e tem o tamanho de ${posF - posI} casas.<br>OBS: Começar a contar de 1 e não de 0.`
+      }
+    }
+  </script>
+</body>
+</html>

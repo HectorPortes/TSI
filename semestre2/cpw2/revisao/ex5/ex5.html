@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 5</title>
+</head>
+<body>
+  <h1>Gerador de senha</h1>
+  <p>Escolha um tamanho</p>
+  <label for="tamanho">Tamanho:</label>
+  <input type="number" id="tamanho" min="6" max="12">
+  <br><br>
+  <button type="button" onclick="gerar()">Gerar</button>
+  <p id="gerado"></p>
+
+  <script>
+    function gerar() {
+      let tamanho = document.getElementById("tamanho").value
+      const caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+"
+      let senha = ""
+
+      for(let i = 0; i < tamanho; i++) {
+      const indiceAleatorio = Math.floor(Math.random() * caracteres.length)
+      senha += caracteres[indiceAleatorio]
+      }
+
+      return document.getElementById("gerado").innerHTML=`Senha: ${senha}` 
+    }
+  </script>
+</body>
+</html>

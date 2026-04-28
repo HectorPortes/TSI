@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 1</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <h1>Formulario</h1>
+  <div class="formulario">
+    <div class="nome">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" placeholder="Digite seu nome">
+    </div>
+    
+    <div class="email">
+      <label for="email">Email:</label>
+      <input type="text" id="email" placeholder="Digite seu email">
+    </div>
+    
+    <div class="nascimento">
+      <label for="nascimento">Data de Nascimento:</label>
+      <input type="text" id="nascimento" placeholder="00000000" minlength="8" maxlength="8"> <!-- minlength e maxlength para garantir que só possa enviar quando tiver 8 numeros no campo-->
+    </div>
+
+    <div class="botao">
+      <button type="button" onclick="validar()">Enviar</button>
+    </div>
+  </div>
+  <script src="codigo.js"/>
+</body>
+</html>

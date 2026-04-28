@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 2</title>
+</head>
+<body>
+  <h1 id="texto">Texto a ser alterado!</h1>
+  <label for="tamanho">Tamanho:</label>
+  <input type="number" id="tamanho" min="1" max="100" value="24" oninput="mudarTamanho()">
+  <br><br>
+  <label for="fonte">Fonte:</label>
+  <select id="fonte" oninput="mudarFonte()">
+    <option value="Times New Roman">Times New Roman</option>
+    <option value="Verdana">Verdana</option>
+    <option value="Arial">Arial</option>
+  </select>
+  <br><br>
+  <label for="cor">Cor:</label>
+  <input type="color" id="cor" oninput="mudarCor()">
+  <script>
+    const texto = document.getElementById("texto")
+    
+    function mudarTamanho() {
+      let tamanho = document.getElementById("tamanho").value
+      texto.style.fontSize=tamanho + "px"
+    }
+    
+    function mudarFonte() {
+      let fonte = document.getElementById("fonte").value
+      texto.style.fontFamily=fonte
+    }
+
+    function mudarCor() {
+      let cor = document.getElementById("cor").value
+      texto.style.color=cor
+    }
+  </script>
+</body>
+</html>

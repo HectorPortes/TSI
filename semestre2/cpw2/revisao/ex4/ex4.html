@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 4</title>
+</head>
+<body>
+  <h1>↓Clique para mostrar 3 formatos de horario↓</h1>
+  <button type="button" onclick="gerar()">Gerar Horário</button>
+  <p id="horarios"></p>
+
+  <script>
+    function gerar() {
+      let horarios = document.getElementById("horarios")
+      const meses = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
+      let data = new Date()
+      let ano = data.getFullYear()
+      let mes = data.getMonth()
+      let dia = data.getDate()
+      let horas = data.getHours()
+
+      return horarios.innerHTML=`Formato 1: ${meses[mes]} de ${ano}.<br>Formato 2: ${dia} de ${meses[mes]} de ${ano}.<br>Formato 3: ${dia} de ${meses[mes]} de ${ano}, ${horas}h.`
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 3</title>
+</head>
+<body>
+  <label for="numero1">X:</label>
+  <input type="number" id="numero1" placeholder="Digite um numero" disabled>
+  <br><br>
+  <label for="numero2">Y:</label>
+  <input type="number" id="numero2" placeholder="Digite um numero" disabled>
+  <br><br>
+  <button type="button" onclick="liberarCP()">Calculo Potência Xʸ</button>
+  <button type="button" onclick="liberarRQ()">Raiz Quadrada de X</button>
+
+  <p id="resposta" onchange="conta()"></p>
+
+  <script>
+    const x = document.getElementById("numero1")
+    const y = document.getElementById("numero2")
+
+    function liberarCP() {
+      x.removeAttribute("disabled")
+      y.removeAttribute("disabled")
+      let num1 = x.value
+      let num2 = y.value
+      if(!num1 || !num2) {
+        return document.getElementById("resposta").innerHTML="Campos liberados, basta preencher e clicar novamente."
+      } else {
+        return document.getElementById("resposta").innerHTML=`${num1}^${num2} = ${Math.pow(num1, num2)}`
+      }
+    }
+
+    function liberarRQ() {
+      x.removeAttribute("disabled")
+      y.setAttribute("disabled", "disabled")
+      let num1 = x.value
+      if(!num1){
+        return document.getElementById("resposta").innerHTML="Campo liberado, basta preencher e clicar novamente."
+      } else {
+        return document.getElementById("resposta").innerHTML=`√${num1} = ${Math.sqrt(num1)}`
+      }
+    }
+  </script>
+</body>
+</html>
