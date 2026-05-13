@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+    <fieldset>
+      <legend>Meu site</legend>
+      <label for="Nome">Nome:</label>
+      <input type="text" placeholder="Digite seu nome!">
+      <br>
+      <label for="Email">Email:</label>
+      <input type="email" placeholder="Digite seu email!">
+      <br>
+      <label for="Fone" >Telefone:</label>
+      <input  type="text" id="Fone" placeholder="Digite seu número!">
+      <br>
+      <label for="Data">data</label>
+      <input type="text" id="Data"">
+      <button type="button" onclick="verificar()">Enviar!</button>
+    </fieldset>
+  </form>
+
+  <script>
+    const verificar =()=> {
+      let idade = document.getElementById("Data").value
+      let dia = idade.slice(0,2) 
+      let mes = idade.slice(2,4)
+      let ano = idade.slice(4)
+      let dataNova = new Date(dia, mes - 1, ano)
+      
+    }  
+  </script>
+</body>
+</html>

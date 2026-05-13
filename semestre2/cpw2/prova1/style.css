@@ -1,0 +1,139 @@
+body {
+    margin: 0%;
+    background-color: rgb(220, 238, 254);
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 3cap;
+    width: fit-content;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 40px 20px 40px;
+    gap: 15px;
+    font-size: 20px;
+    background-color: #fff;
+}
+
+#formulario {
+    margin: 0%;
+    font-size: 30px;
+}
+
+.nome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.email {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.telefone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nascimento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cidade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.estado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profissao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#nome {
+    font-size: 16px;
+    width: 300px;
+}
+
+#email {
+    font-size: 16px;
+    width: 300px;
+}
+
+#telefone {
+    font-size: 16px;
+    width: 300px;
+}
+
+#nascimento {
+    font-size: 16px;
+    width: 300px;
+}
+
+#cidade {
+    font-size: 16px;
+    width: 300px;
+}
+
+#estado {
+    font-size: 16px;
+    width: 300px;
+}
+
+#profissao {
+    font-size: 16px;
+    width: 300px;
+}
+
+#botao {
+    font-size: 18px;
+    width: 130px;
+}
+
+.perfil {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 20px;
+    gap: 10px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    border-radius: 3cap;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#perfil {
+    font-size: 30px;
+    margin-bottom: 0%;
+}
+
+#mudar {
+    margin-top: 0%;
+    font-size: 20px;
+}

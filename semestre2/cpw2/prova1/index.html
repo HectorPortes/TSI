@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Perfil Pessoal Simples</h1>
+
+    <div class="formulario">
+        <h2 id="formulario">Formulario</h2>
+        <div class="nome">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" placeholder="Digite seu nome completo">
+        </div>
+        <div class="email">
+            <label for="email">Email</label>
+            <input type="text" id="email" placeholder="Digite seu email">
+        </div>
+        <div class="telefone">
+            <label for="telefone">Telefone</label>
+            <input type="text" id="telefone" minlength="11" maxlength="11" placeholder="00000000000">
+        </div>
+        <div class="nascimento">
+            <label for="nascimento">Data de Nascimento</label>
+            <input type="text" id="nascimento" minlength="8" maxlength="8" placeholder="00000000">
+        </div>
+        <div class="cidade">
+            <label for="cidade">Cidade</label>
+            <input type="text" id="cidade" placeholder="Digite o nome da sua cidade">
+        </div>
+        <div class="estado">
+            <label for="estado">Estado</label>
+            <input type="text" id="estado" placeholder="Digite o nome do seu estado">
+        </div>
+        <div class="profissao">
+            <label for="profissao">Profissão</label>
+            <input type="text" id="profissao" placeholder="Digite qual sua profissão">
+        </div>
+        <div class="botao">
+            <button id="botao" type="button" onclick="validar(event)" on>Enviar</button>
+        </div>
+    </div>
+    <div class="perfil">
+        <h2 id="perfil">Perfil</h2>
+        <p id="mudar"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
