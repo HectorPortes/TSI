@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estrutura Basica</title>
+  <style>
+    #estrutura {
+      display: grid;
+      grid-template-columns: repeat(2, 38%) 22%;
+      grid-template-rows: 10% 45% 80% 15%;
+      gap: 10px;
+    }
+
+    nav {
+      border: 1px solid black;
+      border-radius: 3cap;
+      grid-column: 1 / -1;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      background-color: rgb(191, 191, 250);
+    }
+
+    header {
+      border: 1px solid black;
+      border-radius: 3cap;
+      grid-column: 1 / -2;
+
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      grid-template-rows: min-content min-content;
+      align-items: center;
+
+      background-color: rgb(168, 255, 168);
+    }
+
+    aside {
+      background-color: rgb(255, 111, 111);
+      border: 1px solid black;
+      border-radius: 3cap;
+
+      grid-column: 3;
+      grid-row: 2 / 4;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    #s1 {
+      border: 1px solid black;
+      border-radius: 3cap;
+      background-color: rgb(250, 250, 135);
+      width: 90%;
+      justify-self: center;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    #s2 {
+      border: 1px solid black;
+      border-radius: 3cap;
+      background-color: rgb(250, 250, 135);
+      width: 90%;
+      justify-self: center;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    footer {
+      border: 1px solid black;
+      border-radius: 3cap;
+      grid-column: 1 / -1;
+    }
+
+    nav h1 {
+      margin: 0%;
+      padding: 5px 10px;
+      font-size: 20px;
+    }
+
+    nav p {
+      font-weight: bold;
+    }
+
+    nav button {
+      height: fit-content;
+      margin: 5px 10px;
+    }
+
+    header #header {
+      grid-column: 1;
+      margin: 17% 0px 0px 25px;
+      font-weight: bold;
+    }
+
+    header #img-perfil {
+      grid-column: 1;
+
+      margin: 10px;
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+      border-radius: 10cap;
+
+      background-image: url('https://gorilaclube.vteximg.com.br/arquivos/ids/173116-500-500/Almofada-de-Pelucia-Meme-Grumpy-Cat.jpg?v=635803615225930000');
+      background-size: cover;
+      background-position: center;
+      transition: background-image 0.5s ease-in-out;
+    }
+
+    header #img-perfil:hover{
+      background-image: url('https://i.redd.it/meu-gato-%C3%A9-praticamente-o-gato-do-meme-v0-n9dleoj8dgfc1.jpg?width=720&format=pjpg&auto=webp&s=426eb562eddf7898e5ba777104b7065552be8114');
+    }
+
+    aside p {
+      margin: 0%;
+      font-weight: bold;
+    }
+
+    .sec {
+      margin: 0%;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="estrutura">
+    <nav>
+      <h1>Titulo</h1>
+      <p>NAV</p>
+      <button>On/Off</button>
+    </nav>
+  
+    <header>
+      <p id="header">HEADER</p>
+      <div id="img-perfil"></div>
+      <p>
+        Nome: Hector Portes<br>
+        Telefone: (67)91234-1234<br>
+        Endereço: Rua Bilidean, 666<br>
+        Email: hectorportes@gmail.com
+      </p>
+    </header>
+  
+    <aside>
+      <p>ASIDE</p>
+      <iframe src="https://api.wo-cloud.com/content/widget/?geoObjectKey=15383057&language=pt&region=BR&timeFormat=HH:mm&windUnit=kmh&systemOfMeasurement=metric&temperatureUnit=celsius" name="CW2" scrolling="no" width="90%" height="38%" frameborder="0" style="border: 1px solid #003959;border-radius: 8px"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3737.5882680047666!2d-55.77641565685801!3d-20.482097337376416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x947de6133756d62b%3A0xca6dd532c488ca4a!2sIFMS%20C%C3%A2mpus%20Aquidauana!5e0!3m2!1spt-BR!2sbr!4v1781729654302!5m2!1spt-BR!2sbr" width="90%" height="40%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </aside>
+  
+    <section id="s1">
+      <p class="sec">SECTION 1</p>
+      <p>
+        Sobre: Gosto de animais, gatos mais<br>
+        Data de Nascimento: 10/08/2006<br>
+        Idade: 19 anos
+      </p>
+    </section>
+  
+    <section id="s2">
+      <p class="sec">SECTION 1</p>
+      <p>
+        Hoobies: sl
+      </p>
+    </section>
+  
+    <footer></footer>
+  </div>
+</body>
+</html>

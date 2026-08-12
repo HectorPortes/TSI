@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista 2 - 1</title>
+  <style>
+    @media only screen and (max-width: 600px) {
+      body {
+        background-color: black;
+        font-size: 12px;
+        color: white;
+      }
+    }
+
+    @media only screen and (min-width: 601px) {
+      body {
+        background-color: yellow;
+        font-size: 24px;
+        color: black;
+      }
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <fieldset>
+      <legend>Formulario</legend>
+
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome">
+      
+      <br><br>
+  
+      <label for="posicao">Posição em Campo:</label>
+      <select id="posicao">
+        <option value="meio">Meio</option>
+        <option value="atacante">Atacante</option>
+        <option value="ladoDireito">Lado Direito</option>
+        <option value="ladoEsquerdo">Lado Esquerdo</option>
+      </select>
+  
+      <br><br>
+  
+      <label for="nascimento">Nascimento:</label>
+      <input type="date" id="nascimento">
+  
+      <br><br>
+  
+      <label for="numero">Número da Camisa:</label>
+      <input type="number" id="numero">
+  
+      <br><br>
+  
+      <button type="button" onclick="validar(event)">Enviar</button>
+    </fieldset>
+  </form>
+
+  <p id="escrever">As informações aparecerão aqui!</p>
+
+  <script>
+    function validar(event) {
+      event.preventDefault()
+      let nome = document.getElementById('nome').value
+      let posicao = document.getElementById('posicao').value
+      let nascimento = document.getElementById('nascimento').value
+      let numero = document.getElementById('numero').value
+      let escrever = document.getElementById('escrever')
+
+      if(!nome || !posicao || !nascimento || !numero) {
+        return alert('Preencha todos os campos')
+      }
+
+      let nomeNun = nome.search(/[0-9]+/g)
+      if(nomeNun != -1) {
+        return alert('Não pode conter numeros no seu nome')
+      } else if (nome.length > 10) {
+        return alert('Nome deve conter no maximo 10 caracteres')
+      }
+
+      let nascimentoData = new Date(nascimento)
+      let ano = nascimentoData.getFullYear()
+      let mes = nascimentoData.getMonth()
+      let dia =  nascimentoData.getDate()
+      let atual = new Date()
+      let idade = atual.getFullYear() - ano
+      if(idade <= 16) {
+        return alert('Você deve ser maior de 16 anos')
+      }
+      
+      return escrever.innerHTML=`Nome: ${nome}.<br>Posição em Campo: ${posicao}.<br>Nascimento: ${dia}/${mes}/${ano}.<br>Idade: ${idade}.<br>Número da Camisa: ${numero}.`
+    }
+  </script>
+</body>
+</html>

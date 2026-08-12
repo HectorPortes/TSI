@@ -1,0 +1,55 @@
+nav, header, section, aside, footer {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(192, 192, 255);
+}
+
+header {
+  height: 100px;
+}
+
+
+#conteudo {
+  display: flex;
+  justify-content: space-between;
+}
+
+#esquerdo {
+  display: flex;
+}
+
+section {
+  width: 400px;
+  height: 200px;
+}
+
+aside {
+  width: 233px;
+}
+
+footer {
+  height: 50px;
+}
+
+#imagem {
+  border: 1px solid black;
+  border-radius: 10cap;
+  height: 80px;
+  width: 80px;
+  
+  background-image: url('https://i.pinimg.com/236x/5b/ba/00/5bba000e97f2ae347e6949b412bdb5a4.jpg');
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.5s ease-in-out;
+}
+
+#imagem:hover {
+  background-image: url('https://pt.vidnoz.com/bimg/gatinho-selfie.webp');
+}

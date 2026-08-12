@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estrutura Basica</title>
+</head>
+<style>
+  body {
+    margin: 10px;
+    display: grid;
+  }
+
+  nav{
+    grid-column: span;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    border: 1px solid black;
+    border-radius: 5cap;
+    padding: 10px 30px 10px 30px;
+
+    background-color: rgb(182, 182, 255);
+  }
+  h1 {
+    margin: 0%;
+  }
+
+  header {
+    grid-column: 1;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 150px 150px;
+    padding: 30px;
+
+    border: 1px solid black;
+    border-radius: 4cap;
+    background-color: rgb(185, 255, 169);
+  }
+  #img-perfil {
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 10cap;
+    background-image: url('https://gorilaclube.vteximg.com.br/arquivos/ids/173116-500-500/Almofada-de-Pelucia-Meme-Grumpy-Cat.jpg?v=635803615225930000');
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease-in-out;
+  }
+  #img-perfil:hover{
+    background-image: url('https://i.redd.it/meu-gato-%C3%A9-praticamente-o-gato-do-meme-v0-n9dleoj8dgfc1.jpg?width=720&format=pjpg&auto=webp&s=426eb562eddf7898e5ba777104b7065552be8114');
+  }
+
+  aside {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+  }
+
+  section {
+    grid-column: 3;
+  }
+</style>
+<body>
+  <nav>
+    <h1>Titulo</h1>
+    <button type="button" onclick="ligDesl()">Claro/Escuro</button>
+  </nav>
+
+  <header>
+    <div id="img-perfil"></div>
+    <p>
+      Nome Sobrenome<br>
+      Telefone<br>
+      Endereço<br>
+      Email
+    </p>
+  </header>
+
+  <aside>
+    Clima<br>
+    Mapa IFMS
+  </aside>
+
+  <section>
+    <h2>dada</h2>
+  </section>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio</title>
+  <style>
+    body{
+      background-color: rgb(250, 250, 241);
+      margin: 0%;
+      font-family: Arial;
+    }
+
+    legend {
+      background-color: white;
+      font-size: 24px;
+      font-weight: bold;
+
+      margin-left: auto;
+      margin-right: auto;
+
+      border: 1px solid black;
+      border-radius: 10px;
+    }
+
+    fieldset {
+      background-color: white;
+
+      border: 1px solid black;
+      border-radius: 3cap;
+
+      height: fit-content;
+      width: fit-content;
+      padding: 15px 33px 21px 33px;
+
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 1%;
+      margin-bottom: 1%;
+    }
+
+    #formu {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px
+    }
+
+    .formu{
+      display: flex;
+      flex-direction: column;
+    }
+
+    #botao{
+      grid-column: 1 / -1;
+      justify-self: center;
+    }
+
+    label {
+      font-size: 18px;
+    }
+
+    input{
+      font-size: 18px;
+      border: 1px solid black;
+      border-radius: 9px;
+    }
+
+    button{
+      background-color: rgb(241, 241, 241);
+      font-size: 18px;
+      border: 1px solid black;
+      border-radius: 3cap;
+      padding: 3px 21px 3px 21px;
+    }
+
+    button:hover{
+      background-color: rgb(220, 219, 219);
+      font-size: 18px;
+      border: 1px solid black;
+      border-radius: 3cap;
+      padding: 3px 21px 3px 21px;
+    }
+
+    #resultado{
+      font-size: 18px;
+    }
+
+    .cadastro{
+      display: grid;
+      grid-template-columns: 300px 300px;
+      grid-column-gap: 30px;
+      grid-row-gap: 10px;
+    }
+
+    #saudacao{
+      margin: auto;
+      padding: 0px 0px 10px 0px;
+    }
+
+    #dados{
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      padding: 0px 0px 15px 0px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .in_criado{
+      border: 1px solid black;
+      border-radius: 9px;
+      width: 100%;
+    }
+
+    #img_esquerda{
+      justify-self: end;
+    }
+
+    #img_direita{
+      justify-self: start;
+      transform: scaleX(-1);
+    }
+
+    #img_baixo{
+      height: 300px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id='principal'>
+    <img id="img_esquerda" src='https://media.tenor.com/59ddlM0ByFMAAAAj/gato-bailando.gif' hidden>
+    <form>
+      <fieldset>
+        <legend>Formulário</legend>
+        <div id="formu">
+          <div class="formu">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" placeholder="Digite seu nome">
+          </div>
+          
+          <div class="formu">
+            <label for="sobrenome">Sobrenome:</label>
+            <input type="text" id="sobrenome" placeholder="Digite seu sobrenome">
+          </div>
+          
+          <div class="formu">
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" placeholder="Digite seu CPF">
+          </div>
+          
+          <div class="formu">
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="telefone" placeholder="Digite seu telefone">
+          </div>
+          
+          <div class="formu">
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" placeholder="Digite seu endereço">
+          </div>
+          
+          <div class="formu">
+            <label for="nascimento">Data Nascimento:</label>
+            <input type="date" id="nascimento">
+          </div>
+          
+          <div class="formu">
+            <label for="idade">Idade:</label>
+            <input type="text" id="idade" placeholder="Digite sua idade">
+          </div>
+          
+          <div class="formu">
+            <label for="email">Email:</label>
+            <input type="text" id="email" placeholder="Digite seu email">
+          </div>
+          
+          <div id="botao">
+            <button type="button" onclick="validar(event)">Enviar</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+    <img id="img_direita" src='https://media.tenor.com/59ddlM0ByFMAAAAj/gato-bailando.gif' hidden>
+  </div>
+    
+  <p id="resultado"></p>
+
+  <script>
+    function validar(event) {
+      event.preventDefault()
+      let nome = document.getElementById("nome").value;
+      let sobrenome = document.getElementById("sobrenome").value;
+      let cpf = document.getElementById("cpf").value;
+      let telefone = document.getElementById("telefone").value;
+      let endereco = document.getElementById("endereco").value;
+      let nascimento = document.getElementById("nascimento").value;
+      let idade = document.getElementById("idade").value;
+      let email = document.getElementById("email").value;
+
+
+      if(!nome || !sobrenome || !cpf || !telefone || !endereco || !nascimento ||!idade || !email){
+        return alert('Preencher todos os campos!');
+      }
+
+
+      let nomeNum = nome.search(/[0-9]+/g);
+      if(nomeNum != -1){
+        return alert('Nome não pode conter números!');
+      }
+      nome = `${nome.charAt(0).toUpperCase()}${nome.charAt(1).toUpperCase()}${nome.slice(2)}`;
+
+
+      let sobreNum = sobrenome.search(/[0-9]+/g);
+      if(sobreNum != -1){
+        return alert('Sobrenome não pode conter números!')
+      }
+      sobrenome = `${sobrenome.charAt(0).toUpperCase()}${sobrenome.charAt(1).toUpperCase()}${sobrenome.slice(2).toLowerCase()}`;
+
+
+      if(isNaN(cpf)){
+        return alert('CPF deve conter apenas números!')
+      }
+      if(cpf.length != 11){
+        return alert('CPF deve conter 11 digitos!')
+      }
+      cpf = `${cpf.slice(0,3)}.${cpf.slice(3,6)}.${cpf.slice(6,9)}-${cpf.slice(9)}`
+
+
+      if(isNaN(telefone)){
+        return alert('Telefone deve conter apenas números!')
+      }
+      if(telefone.length != 11){
+        return alert('Telefone deve conter 11 digitos!')
+      }
+      telefone = `(${telefone.slice(0,2)})${telefone.slice(2,7)}-${telefone.slice(7)}`
+
+
+      let nascPartes = nascimento.split("-");
+      let nascBR = `${nascPartes[2]}/${nascPartes[1]}/${nascPartes[0]}`
+
+      if(isNaN(idade)){
+        return alert('Idade deve conter apenas números!')
+      }
+
+      let temArro = email.includes('@')
+      if(temArro != true) {
+        return alert('Email invalido! Deve conter @')
+      }
+
+      document.getElementById('img_esquerda').hidden=false
+      document.getElementById('img_direita').hidden=false
+      document.getElementById('principal').style=`display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; width: 100%;`
+
+      return document.getElementById('resultado').innerHTML=`
+        <div style='display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; width: 100%;'>
+          <img src='https://i.pinimg.com/originals/c1/97/e1/c197e1fc5e0178579c3ef6e98fb33ab1.gif' style='width: 250px; transform: scaleX(-1); justify-self: center;'>
+          <fieldset>
+            <legend>Cadastro Completo</legend>
+            
+              <p id='saudacao'>Olá ${nome} ${sobrenome}.</p>
+  
+              <p id="dados">Dados Pessoais</p>
+  
+              <div class='cadastro'>
+                <div>
+                  <label>CPF:</label>
+                  <input class='in_criado' value='${cpf}' disabled>
+                </div>
+  
+                <div>
+                  <label>Telefone:</label>
+                  <input class='in_criado' value='${telefone}' disabled>
+                </div>
+  
+                <div>
+                  <label>Endereço:</label>
+                  <input class='in_criado' value='${endereco}' disabled>
+                </div>
+  
+                <div>
+                  <label>Data Nascimento:</label>
+                  <input class='in_criado' value='${nascBR}' disabled>
+                </div>
+  
+                <div>
+                  <label>Idade:</label>
+                  <input class='in_criado' value='${idade}' disabled>
+                </div>
+  
+                <div>
+                  <label>Email:</label>
+                  <input class='in_criado' value='${email}' disabled>
+                </div>
+              </div>
+          </fieldset>
+          <img src='https://i.pinimg.com/originals/c1/97/e1/c197e1fc5e0178579c3ef6e98fb33ab1.gif' style='width: 250px; justify-self: center;'>
+        </div>
+
+        <img id='img_baixo' src='https://media1.tenor.com/m/CJs7CAK8UXwAAAAC/spell-cat-ai.gif'>
+      `
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input id="nome">
+  <input type="date" id="data">
+  <button type="button" onclick="mostrar()">
+    mostrar
+  </button>
+  <p id="resultado"></p>
+
+  <script>
+    function mostrar() {
+      let nome = document.getElementById("nome").value;
+      // let data = new Date(document.getElementById("data").value); // primeiro metodo de salvar data
+      let data = document.getElementById("data").value; // segundo metodo de salva data
+    
+      nome = nome.charAt(0).toUpperCase() + nome.charAt(1).toUpperCase() + nome.slice(2).toLowerCase();
+      // let dataBR = data.toLocaleDateString("pt-BR"); // primeiro metodo de salvar data
+      let partes = data.split("-"); // segundo metodo de salvar data
+      let dataBR = `${partes[2]}/${partes[1]}/${partes[0]}`; // segundo metodo de salvar data
+
+      return document.getElementById("resultado").innerHTML=`Bem vinde ${nome}.\nNascido em ${dataBR}.`;
+    }
+  </script>
+</body>
+</html>

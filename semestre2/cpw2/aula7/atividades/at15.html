@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="btnAcao" class="botao primario" onclick="muda()">Ação</button>
+  <script>
+    const muda = () => {
+      let botao = document.getElementById('btnAcao')
+      botao.classList.add("ativo")
+      botao.classList.remove("primario")
+      if(botao.classList.contains("botao")){
+        return alert("class encontrada com sucesso")
+      }
+    }
+  </script>
+</body>
+</html>

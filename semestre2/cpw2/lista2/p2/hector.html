@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista 2 - 2</title>
+  <style>
+    @media only screen and (max-width: 600px) {
+      body {
+        background-color: black;
+        color: white;
+        font-size: 12px;
+      }
+    }
+
+    @media only screen and (min-width: 601px) {
+      body {
+        background-color: yellow;
+        color: black;
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="aqui"></div>
+
+  <script>
+    document.getElementById('aqui').innerHTML=`<form>
+    <fieldset>
+      <legend>Formulario</legend>
+
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome">
+
+      <br><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email">
+
+      <br><br>
+
+      <label for="telefone">Telefone:</label>
+      <input type="number" id="telefone">
+    
+      <br><br>
+
+      <label for="pet">Nome do Pet:</label>
+      <input type="text" id="pet">
+
+      <br><br>
+
+      <label for="tipo">Tipo de Animal:</label>
+      <select id="tipo">
+        <option value="gato">Gato</option>
+        <option value="cachorro">Cachorro</option>
+      </select>
+
+      <br><br>
+
+      <label for="data_hora">Data e Hora da Consulta:</label>
+      <input type="datetime-local" id="data_hora">
+
+      <br><br>
+
+      <button type="button" onclick="validar(event)">Enviar</button>
+    </fieldset>
+  </form>
+
+  <div id="mostrar"></div>`
+
+    function validar(event) {
+      event.preventDefault()
+      let nome = document.getElementById('nome').value
+      let email = document.getElementById('email').value
+      let telefone = document.getElementById('telefone').value
+      let pet = document.getElementById('pet').value
+      let tipo = document.getElementById('tipo').value
+      let data_hora = document.getElementById('data_hora').value
+      let mostrar = document.getElementById('mostrar')
+
+      if(!nome || !email || !telefone || !pet || !tipo || !data_hora) {
+        return alert("Preencher todos os campos")
+      }
+      
+      let horario = data_hora.slice(11)
+      let hora = horario.slice(0, 2)
+      let minutos = horario.slice(3)
+      hora = Number(hora)
+      minutos = Number(minutos)
+
+      let ano = data_hora.slice(0, 4)
+      let mes = data_hora.slice(5, 7)
+      let dia = data_hora.slice(8, 10)
+      let data = new Date(ano, mes, dia)
+      let dataAtual = new Date()
+
+      if(data < dataAtual) {
+        return alert('A data não pode estar no passado')
+      } else if(hora < 7 || hora > 19) {
+        return alert('O horario deve ser entre das 7:00 as 19:30')
+      } else if(hora == 19 && minutos > 30) {
+        return alert('O horario deve ser entre das 7:00 as 19:30')
+      }
+
+      pet = pet.toUpperCase()
+
+      let foto
+      if(tipo == "gato") {
+        foto = "/gato.jpg"
+      } else {
+        foto = "/cachorro.jpg"
+      }
+
+      return mostrar.innerHTML=`<p>Nome: ${nome}<br>Email: ${email}<br>Telefone: ${telefone}<br>Nome do Pet: ${pet}<br>Tipo de Animal: ${tipo}<br> Data e Hora da Consulta: ${dia}/${mes}/${ano}-${hora}:${minutos}</p><img src="${foto}" style="height: 300px; width: 300px;">`
+    }
+  </script>
+</body>
+</html>

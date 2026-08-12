@@ -12,6 +12,7 @@ exports.listarProdutos = async (req, res) => {
 }
 
 exports.adicionarProduto = async (req, res) => {
+  // req.body OU req.params OU req.query
   const novoProduto = req.body;
   if(!novoProduto.nome || !novoProduto.preco) {
     res.send('[ERRO]: informar nome e preço!');
