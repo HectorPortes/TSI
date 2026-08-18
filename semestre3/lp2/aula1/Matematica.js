@@ -1,3 +1,6 @@
+'use strict'
+
+
 // Classe utilitaria
 class Matematica {
   static soma(a, b) { // metodo estatico -> não precisa criar um objeto do tipo da classe para usar o metodo
